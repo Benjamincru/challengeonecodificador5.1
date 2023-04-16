@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+  <title>Encriptador/Desencriptador</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img id="encriptar" src="encriptar.png">
+  <h1>Encriptador/Desencriptador</h1>
+  
+  <label for="texto">Texto:</label>
+  <input type="text" id="texto"><br><br>
+  
+  <button onclick="encriptar()">Encriptar</button>
+  <button onclick="desencriptar()">Desencriptar</button><br><br>
+  
+  <label for="resultado">Resultado:</label>
+  <textarea id="resultado" rows="5" cols="50"></textarea>
+  
+  
+  <footer>
+    <p>Desarrollado por Benjamin cruz</p>
+  </footer>
+  
+  <script>
+    function encriptar() {
+      var texto = document.getElementById("texto").value;
+      var resultado = "";
+      
+      for (var i = 0; i < texto.length; i++) {
+        var letra = texto.charAt(i);
+        switch (letra) {
+          case "e":
+            resultado += "enter";
+            break;
+          case "i":
+            resultado += "imes";
+            break;
+          case "a":
+            resultado += "ai";
+            break;
+          case "o":
+            resultado += "ober";
+            break;
+          case "u":
+            resultado += "ufat";
+            break;
+          default:
+            resultado += letra;
+        }
+      }
+      
+      document.getElementById("resultado").value = resultado;
+    }
+    
+    function desencriptar() {
+      var texto = document.getElementById("texto").value;
+      var resultado = "";
+      
+      for (var i = 0; i < texto.length; i += 5) {
+        var grupo = texto.substr(i, 5);
+        switch (grupo) {
+          case "enter":
+            resultado += "e";
+            break;
+          case "imes":
+            resultado += "i";
+            break;
+          case "ai":
+            resultado += "a";
+            break;
+          case "ober":
+            resultado += "o";
+            break;
+          case "ufat":
+            resultado += "u";
+            break;
+          default:
+            resultado += grupo;
+        }
+      }
+      
+      document.getElementById("resultado").value = resultado;
+    
+    }
+    
+    
+  </script>
+</body>
+</html>
+

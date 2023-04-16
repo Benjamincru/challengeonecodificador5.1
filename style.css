@@ -1,0 +1,30 @@
+body{
+    background: rgba(255, 99, 71, 0.8);
+}
+
+#encriptar{
+    width: 100%;
+
+}
+
+h1{
+    text-align: center;
+}
+textarea{
+    border-radius: 10px;
+}
+button{
+    border: none;
+    border-radius: 10px;
+    color: black;
+    background: transparent;
+    border: 2px solid #0099CC;
+    
+}
+
+
+p{
+    text-align: center;
+}
+
+
